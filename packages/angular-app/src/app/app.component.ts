@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import '../../../mars-button/mars-button.js';
+import '@marcelagotta/my-search/my-search.js';
 
 @Component({
   selector: 'app-root',

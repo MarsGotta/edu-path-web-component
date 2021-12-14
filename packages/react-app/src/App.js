@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import logo from "./logo.svg";
-import "@devcast/mars-button/mars-button.js";
 import "./App.css";
 
 function App() {
   useEffect(() => {
-    import("@devcast/mars-button/mars-button.js");
+    import("@marcelagotta/my-search/my-search.js");
   });
 
   return (
@@ -15,7 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <mars-button>Hola soy un webComponent!</mars-button>
+        <my-search><span slot="button">Hola soy un webComponent!</span></my-search>
         <a
           className="App-link"
           href="https://reactjs.org"

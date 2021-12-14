@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Native Search WebComponent</title>
+    <script type="module" src="../my-search.js"></script>
+</head>
+<body>
+    <h2>Default</h2>
+    <my-search button="hello world" label="Soy un label" input="Soy un input"></my-search>
+    <h2>With slots</h2>
+    <my-search>
+        <span slot="label">
+            Label slotted
+        </span>
+        <span slot="button">
+            Button slotted
+        </span>
+    </my-search>
+    <h2>Custom Properties</h2>
+    <my-search class="variables" button="hello world" label="Soy un label" input="Soy un input"></my-search>
+    <h2>CSS Parts</h2>
+    <my-search class="parts" button="hello world" label="Soy un label" input="Soy un input"></my-search>
+    <style>
+        my-search.parts::part(button) {
+            background-color: red;
+        }
+        my-search.variables {
+            --button-bg-color: #00bcd4;
+        }
+    </style>
+    <script type="module">
+        document.querySelectorAll('my-search').forEach(function(button) {
+            button.addEventListener('on-click', function(event) {
+                alert('clicked: ' + event.detail.button);
+            });
+        });
+    </script>
+</body>
+</html>
