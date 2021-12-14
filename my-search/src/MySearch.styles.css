@@ -1,0 +1,29 @@
+:host {
+    display: block;
+    border: 1px solid #5f3993;
+    padding: 10px;
+    width: fit-content;
+}
+
+::slotted(span) {
+    color: red;
+}
+
+button {
+    border: none;
+    background-color: var(--button-bg-color, #5f3993);
+    cursor: pointer;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #9f7fcd;
+}
+
+button:active, button:focus {
+    background-color: #472b6e;
+}
