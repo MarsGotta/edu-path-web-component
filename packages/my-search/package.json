@@ -3,7 +3,7 @@
     "description": "Webcomponent my search for the webcomponent edu path",
     "license": "MIT",
     "author": "Mars Gotta",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "main": "index.js",
     "module": "index.js",
     "scripts": {

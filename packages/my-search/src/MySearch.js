@@ -5,7 +5,6 @@ export class MySearch extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
 
     this.button = "";
     this.label = "";
@@ -17,6 +16,8 @@ export class MySearch extends HTMLElement {
     if (super.connectedCallback) {
       super.connectedCallback();
     }
+
+    this.attachShadow({ mode: "open" });
 
     this.render();
 
@@ -42,14 +43,6 @@ export class MySearch extends HTMLElement {
     if (super.disconnectedCallback) {
       super.disconnectedCallback();
     }
-  }
-
-  get button() {
-    return this.getAttribute("button");
-  }
-
-  set button(data) {
-    this.setAttribute("button", data);
   }
 
   handleClick(e) {

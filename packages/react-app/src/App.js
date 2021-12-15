@@ -14,7 +14,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <my-search><span slot="button">Hola soy un webComponent!</span></my-search>
+        <my-search label="Soy un label"><span slot="button">Hola soy un webComponent!</span></my-search>
         <a
           className="App-link"
           href="https://reactjs.org"
